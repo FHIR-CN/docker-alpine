@@ -3,13 +3,16 @@
 [![CircleCI](https://img.shields.io/circleci/project/gliderlabs/docker-alpine/release.svg)](https://circleci.com/gh/gliderlabs/docker-alpine)
 [![Docker Stars](https://img.shields.io/docker/stars/gliderlabs/alpine.svg)][hub]
 [![Docker Pulls](https://img.shields.io/docker/pulls/gliderlabs/alpine.svg)][hub]
-[![IRC Channel](https://img.shields.io/badge/irc-%23gliderlabs-blue.svg)][irc]
+[![Slack](http://glider-slackin.herokuapp.com/badge.svg)][slack]
+[![Image Size](https://img.shields.io/imagelayers/image-size/gliderlabs/alpine/latest.svg)](https://imagelayers.io/?images=gliderlabs/alpine:latest)
+[![Image Layers](https://img.shields.io/imagelayers/layers/gliderlabs/alpine/latest.svg)](https://imagelayers.io/?images=gliderlabs/alpine:latest)
+
 
 A super small Docker image based on [Alpine Linux][alpine]. The image is only 5 MB and has access to a package repository that is much more complete than other BusyBox based images.
 
 ## Why?
 
-Docker images today are big. Usually much larger than they need to be. There are a lot of ways to make them smaller. But the Docker populous still jumps to the `ubuntu` base image for most projects. The size savings over `ubuntu` and other bases are huge:
+Docker images today are big. Usually much larger than they need to be. There are a lot of ways to make them smaller, but the Docker populace still jumps to the `ubuntu` base image for most projects. The size savings over `ubuntu` and other bases are huge:
 
 ```
 REPOSITORY          TAG           IMAGE ID          VIRTUAL SIZE
@@ -66,9 +69,9 @@ Only 3 seconds to build and results in a 16 MB image! Hooray!
 
 This image is well documented. [Check out the documentation at Viewdocs][docs] and the `docs` directory in this repository.
 
-## Support
+## Contacts
 
-We make reasonable efforts to support our work and are always happy to chat. Feel free to join us in [#gliderlabs on Freenode][irc] or [submit an issue][issues] to this GitHub repository.
+We make reasonable efforts to support our work and are always happy to chat. Join us in [our Slack community][slack] or [submit a GitHub issue][issues] if you have a security or other general question about this Docker image. Please email [security](http://lists.alpinelinux.org/alpine-security/summary.html) or [user](http://lists.alpinelinux.org/alpine-user/summary.html) mailing lists if you have concerns specific to Alpine Linux.
 
 ## Inspiration
 
@@ -88,7 +91,7 @@ The code in this repository, unless otherwise noted, is BSD licensed. See the `L
 [alpine-packages]: http://pkgs.alpinelinux.org/
 [alpine-about]: https://www.alpinelinux.org/about/
 [docs]: http://gliderlabs.viewdocs.io/docker-alpine
-[irc]: https://kiwiirc.com/client/irc.freenode.net/#gliderlabs
+[slack]: http://glider-slackin.herokuapp.com/
 [issues]: https://github.com/gliderlabs/docker-alpine/issues
 [alpine]: http://alpinelinux.org/
 [fastly]: https://www.fastly.com/

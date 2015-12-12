@@ -5,7 +5,7 @@ setup() {
 @test "version is correct" {
   run docker run "alpine:edge" cat /etc/os-release
   [ $status -eq 0 ]
-  [ "${lines[2]}" = "VERSION_ID=3.2.0" ]
+  [ "${lines[2]}" = "VERSION_ID=3.3.0_rc2" ]
 }
 
 @test "package installs cleanly" {
@@ -36,4 +36,10 @@ setup() {
   run docker run "alpine:edge" sh -c "ls -1 /var/cache/apk | wc -l"
   [ $status -eq 0 ]
   [ "$output" = "0" ]
+}
+
+@test "root password is disabled" {
+  run docker run "alpine:edge" sh -c "adduser -D -s /bin/ash test; su -c 'echo | su' - test"
+  [ $status -eq 1 ]
+  [ "${lines[1]}" = "su: incorrect password" ]
 }

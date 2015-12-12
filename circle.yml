@@ -6,6 +6,9 @@ general:
       - /rootfs-.*/
 
 machine:
+  pre:
+    - sudo curl -L -o /usr/bin/docker 'https://s3-external-1.amazonaws.com/circle-downloads/docker-1.9.1-circleci'
+    - sudo chmod 0755 /usr/bin/docker
   services:
     - docker
 
@@ -30,14 +33,7 @@ test:
         parallel: true
         files:
           - versions/**/options
-
-deployment:
-  hub:
-    branch: release
-    commands:
-      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD:
-          parallel: true
-      - ./build push:
-          parallel: true
-      - ./build commit:
-          parallel: true
+  post:
+    - if [[ "$CIRCLE_BRANCH" == "release" ]]; then docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD; fi
+    - if [[ "$CIRCLE_BRANCH" == "release" ]]; then ./build push; fi
+    - if [[ "$CIRCLE_BRANCH" == "release" ]]; then ./build commit; fi

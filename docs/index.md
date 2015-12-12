@@ -3,7 +3,10 @@
 [![CircleCI](https://img.shields.io/circleci/project/gliderlabs/docker-alpine/release.svg)](https://circleci.com/gh/gliderlabs/docker-alpine)
 [![Docker Stars](https://img.shields.io/docker/stars/gliderlabs/alpine.svg)][hub]
 [![Docker Pulls](https://img.shields.io/docker/pulls/gliderlabs/alpine.svg)][hub]
-[![IRC Channel](https://img.shields.io/badge/irc-%23gliderlabs-blue.svg)][irc]
+[![Slack](http://glider-slackin.herokuapp.com/badge.svg)][slack]
+[![Image Size](https://img.shields.io/imagelayers/image-size/gliderlabs/alpine/latest.svg)](https://imagelayers.io/?images=gliderlabs/alpine:latest)
+[![Image Layers](https://img.shields.io/imagelayers/layers/gliderlabs/alpine/latest.svg)](https://imagelayers.io/?images=gliderlabs/alpine:latest)
+
 
 Welcome to the documentation for the Alpine Linux Docker Image. Here we explain a bit about the motivations behind this image, how you typically use it, the build process, and how to make great minimalist containers!
 
@@ -31,9 +34,9 @@ The musl libc implementation may work a little different than you are used to. O
 
 This image is built and tested in a continuous integration environment using the `build` script. We then push the resulting images directly to Docker Hub. Check out [the page on building and testing][build] the images for more information.
 
-## Support
+## Contacts
 
-We make reasonable efforts to support our work and are always happy to chat. Feel free to join us in [#gliderlabs on Freenode][irc] or [submit an issue][issues] to the GitHub repository.
+We make reasonable efforts to support our work and are always happy to chat. Join us in [our Slack community][slack] or [submit a GitHub issue][issues] if you have a security or other general question about this Docker image. Please email [security](http://lists.alpinelinux.org/alpine-security/summary.html) or [user](http://lists.alpinelinux.org/alpine-user/summary.html) mailing lists if you have concerns specific to Alpine Linux.
 
 ## Contributing
 
@@ -49,7 +52,7 @@ We welcome contributions to the image build process, version bumps, and other op
 [usage]: /docker-alpine/usage
 [build]: /docker-alpine/build
 [caveats]: /docker-alpine/caveats
-[irc]: https://kiwiirc.com/client/irc.freenode.net/#gliderlabs
+[slack]: http://glider-slackin.herokuapp.com/
 [issues]: https://github.com/gliderlabs/docker-alpine/issues
 [alpine]: http://alpinelinux.org/
 [library]: https://github.com/docker-library/official-images/blob/master/library/alpine
